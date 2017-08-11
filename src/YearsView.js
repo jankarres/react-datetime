@@ -1,7 +1,7 @@
 'use strict';
 
 var React = require('react'),
-    createClass = require('create-react-class'),
+    createClass = require('create-react-class')
 ;
 
 var DOM = React.DOM;

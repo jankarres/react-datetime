@@ -2,7 +2,7 @@
 
 var React = require('react'),
     createClass = require('create-react-class'),
-	assign = require('object-assign'),
+	assign = require('object-assign')
 ;
 
 var DOM = React.DOM;
