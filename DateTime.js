@@ -5,7 +5,8 @@ var assign = require('object-assign'),
         createClass = require('create-react-class'),
 	moment = require('moment'),
 	React = require('react'),
-	CalendarContainer = require('./src/CalendarContainer')
+	CalendarContainer = require('./src/CalendarContainer'),
+    onClickOutside = require('react-onclickoutside')
 ;
 
 var TYPES = PropTypes;
@@ -378,7 +379,7 @@ var Datetime = createClass({
 	componentProps: {
 		fromProps: ['value', 'isValidDate', 'renderDay', 'renderMonth', 'renderYear', 'timeConstraints'],
 		fromState: ['viewDate', 'selectedDate', 'updateOn'],
-		fromThis: ['setDate', 'setTime', 'showView', 'addTime', 'subtractTime', 'updateSelectedDate', 'localMoment', 'handleClickOutside']
+		fromThis: ['setDate', 'setTime', 'showView', 'addTime', 'subtractTime', 'updateSelectedDate', 'localMoment']
 	},
 
 	getComponentProps: function() {
@@ -437,4 +438,4 @@ var Datetime = createClass({
 // Make moment accessible through the Datetime class
 Datetime.moment = moment;
 
-module.exports = Datetime;
+module.exports = onClickOutside(Datetime);
